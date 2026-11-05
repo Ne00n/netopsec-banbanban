@@ -13,4 +13,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 EOF
 chown root:root "/etc/cron.d/update-banlist"
 chmod 644 "/etc/cron.d/update-banlist"
-echo "Installed /etc/cron.d/update-banlist (executes every 5 minutes and on boot). Done."
+echo "Installation done, cronjob will execute every 5 minutes to update the banlist."
