@@ -14,8 +14,8 @@ set -euo pipefail
 
 API_URL="${API_URL:-https://report.opsec.wang/bans}"
 CHAIN="${CHAIN:-INPUT}"             # use DOCKER-USER to also filter container traffic
-SET4="${SET4:-banlist4}"
-SET6="${SET6:-banlist6}"
+SET4="${SET4:-netopsec4}"
+SET6="${SET6:-netopsec6}"
 MAXELEM="${MAXELEM:-262144}"
 
 [[ $EUID -eq 0 ]] || { echo "Run as root." >&2; exit 1; }
