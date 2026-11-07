@@ -9,8 +9,8 @@ chmod +x /usr/local/bin/update-banlist.sh
 
 cat > "/etc/cron.d/update-banlist" <<EOF
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin 
-*/5 * * * * root /usr/local/bin/update-banlist.sh 2>&1
-@reboot root sleep 30 && /usr/local/bin/update-banlist.sh 2>&1
+*/5 * * * * root /usr/local/bin/update-banlist.sh > /dev/null
+@reboot root sleep 30 && /usr/local/bin/update-banlist.sh > /dev/null
 EOF
 chown root:root "/etc/cron.d/update-banlist"
 chmod 644 "/etc/cron.d/update-banlist"
